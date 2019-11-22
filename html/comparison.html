@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<!-- Hides If Small or XS -->
+<div class="d-none d-md-block">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+            <!-- Brand -->
+            <a class="navbar-brand" id = "container_background_teal" href="index.html">
+                Latitude vs. Weather
+            </a>
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="C:\Users\iretemiadelaja\Desktop\RU-HOU-DATA-PT-07-2019-U-C\11-Web\1\Activities\04-Stu_MyFirst_HTML\Solved\my-first.html" id="navbardrop" data-toggle="dropdown">
+                        Plots
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Lat_vs_Temp.html">Max Temperature</a>
+                        <a class="dropdown-item" href="Lat_vs_Humidity.html">Humidity</a>
+                        <a class="dropdown-item" href="Lat_vs_Cloud.html">Cloudiness</a>
+                        <a class="dropdown-item" href="Lat_vs_wind.html">Wind Speed</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparisons.html">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/iretemiadelaja/Web-Design-Challenge">Temi A Homework</a>
+                </li>
+            </ul>
+    </nav>
+</div>
+<!-- Hides If Medium or Lg -->
+<div class="d-md-none">
+    <nav class="navbar navbar-expand-md bg-light navbar-light">
+        <!-- Brand -->
+        <a class="navbar-brand" id = "container_background_teal" href="index.html">
+            Latitude vs. Weather
+        </a>
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link" href="#">Plots</a>
+                <li><a id = "sub_dropdown" href="Lat_vs_Temp.html">Max Temperature</a></li>
+                <li><a id = "sub_dropdown" href="Lat_vs_Humidity.html">Humidity</a></li>
+                <li><a id = "sub_dropdown" href="Lat_vs_Cloud.html">Cloudiness</a></li>
+                <li><a id = "sub_dropdown" href="Lat_vs_wind.html">Wind Speed</a></li>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="comparisons.html">Comparison</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="data.html">Data</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/iretemiadelaja/Web-Design-Challenge">Temi A Homework</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+</div>
+
+<br>
+
+<body id = "container_background_gray">
+    <div class = "row">
+        <div class = "col-sm-12 col-lg-7"> 
+            <div id = "container_background_white" class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1 id = "header_text">
+                    Summary: Latitude vs. Weather
+                </h1>
+                <hr>
+                <img class="img-fluid" id = "image" src="Lat vs Temp.png" alt="lat_vs_temp_picture_big" />
+                <p id = "body_text">
+                    The purpose of this project was to analyze how weather changes with latitude changes.  
+                    To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.
+                    After assembling the dataset, we used Matplot lib to plot various aspects of the weather vs. latitude.  
+                    Factors we looked at included: temperature, cloudiness, wind speed, and humidity.
+                    This site provided the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+                </p>
+            </div>
+        </div>
+        <div class = "col-sm-12 col-lg-5">
+            <div id = "container_background_white" class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1 id = "header_text">
+                    Visualizations
+                </h1>
+                <hr>
+                <div class = "container">
+                    <div class = row>
+                        <div class = "col-xs-3 col-sm-3 col-md-6 col-lg-6"> 
+                            <a href = "Lat_vs_Cloud.html">
+                                <img class="img-fluid" id = "image_with_border" src="Lat vs.Cloudiness.png" alt="lat_vs_cloudiness_picture_small">
+                            </a>
+                        </div>
+                        <div class = "col-xs-3 col-sm-3 col-md-6 col-lg-6"> 
+                            <a href = "Lat_vs_Humidity.html">
+                                <img class="img-fluid" id = "image" src="Lat vs Humidity.png" alt="lat_vs_humidity_picture_small" href="Lat_vs_Humidity.html"/>
+                            </a>
+                        </div>
+                        <div class = "col-xs-3 col-sm-3 col-md-6 col-lg-6"> 
+                            <a href = "Lat_vs_Temp.html">
+                                <img class="img-fluid" id = "image" src="Lat vs Temp.png" alt="lat_vs_temp_picture_small" href="Lat_vs_Temp.html"/>
+                            </a>
+                        </div>
+                        <div class = "col-xs-3 col-sm-3 col-md-6 col-lg-6"> 
+                            <a href = "Lat_vs_wind.html">
+                                <img class="img-fluid" id = "image" src="lat vs wind.png" alt="lat_vs_wind_picture_small" href="Lat_vs_wind.html"/>  
+                            </a>
+                        </div>                                                                            
+                    </div>  
+                </div>
+            <div>
+        </div>
+    </div>        
+</body>
+</html>
