@@ -1,0 +1,112 @@
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  position:absolute;
+  font-size:200%;
+  color:RED;
+  font-weight: bold;
+  text-decoration:none;
+  text-align:center;
+  width:100%;
+}
+
+p {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: left;
+  font-style: italic;
+}
+
+h4 {
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+  font-style: italic;
+}
+
+h3 {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+/* Homepage Background */
+.homepage {
+  background-color: #ded3d1;
+  height: 100vh;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+}
+
+#mapDossier {
+  height: 450px;
+  width: 800px;
+  top: 75px;
+  left: 25px;
+}
+
+#brandDoessier {
+  height: 450px;
+  width: 800px;
+
+}
+
+.content0 {
+  height: 10vh;
+  padding-top: 10px;
+  background-color: #9ebcd8;
+  font-size: 36px;
+}
+
+.lite {
+  background-color: #white;
+  height: 10px;
+  width: 100%;
+}
+
+.content1 {
+  position: absolute;
+  top: 75px;
+  right: 50px;
+  width: 300px;
+  height: 450px;
+  background-color: #9ebcd8;
+  padding-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Navigation Bar */
+#navbar {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 2vh 5vh;
+  text-decoration: none;
+  font-size: 90%;
+  font-weight: bold;
+}
+
+#navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: black;
+  text-decoration: none;
+  outline: none;
+}
