@@ -243,7 +243,7 @@ tweetscraper==1.2.6
 Twisted==19.10.0
 twitterscraper==1.4.0
 unicodecsv==0.14.1
-urllib3==1.24.1
+urllib3==1.24.2
 us==1.0.0
 values==2019.4.13
 virtualenv==16.7.4
