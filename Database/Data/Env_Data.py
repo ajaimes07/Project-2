@@ -9,13 +9,13 @@ conn = 'mongodb://localhost:27017'
 client = pymongo.MongoClient(conn)
 
 # Declare the database
-db = Project2
+db = client.Project2
 
 # Declare the collection
 #collection = db#.fruits_db
-collection = Project2.NEON
+collection = db.NEON_db
 
-dfItems = pd.read_csv(NEON_field-sites)
+dfItems = pd.read_csv('NEON_field-sites.csv')
 columns = dfItems.columns
 colList = []
 for index, row in dfItems.iterrows():
@@ -23,8 +23,8 @@ for index, row in dfItems.iterrows():
         cc = '{}:{}'.format(c,row[c])
         colList.append(cc)
 
-    post = {colList}  # Converting list to dictionary
-
+    #post = {colList}  # Converting list to dictionary
+    post = colList  # Converting list to dictionary
 # Insert the document into the database
     collection.insert_one(post)    
 #    post = {
@@ -33,6 +33,7 @@ for index, row in dfItems.iterrows():
     # collection.insert_one(post)    
 
 # Verify results:
-results = db.fruits_db.find()
+#results = db.fruits_db.find()
+results = db.NEON.find()
 for result in results:
     print(result)
