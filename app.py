@@ -31,18 +31,18 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/api/categories")
-def categories():
+# @app.route("/api/categories")
+# def categories():
     
-    return jsonify()
+#     return jsonify()
 
-@app.route("/api/#extremeweather")
-def extremeweather():
+# @app.route("/api/#extremeweather")
+# def extremeweather():
 
-    return jsonify(data)
+#     return jsonify(data)
 
-@app.route("/api/#severeweather")
-def jhg():
+# @app.route("/api/#severeweather")
+# def jhg():
 
     return jsonify(data)
 
