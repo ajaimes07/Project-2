@@ -42,7 +42,7 @@ def extremeweather():
     return jsonify(data)
 
 @app.route("/api/#severeweather")
-def extremeweather():
+def jhg():
 
     return jsonify(data)
 
