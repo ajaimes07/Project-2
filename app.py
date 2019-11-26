@@ -18,11 +18,11 @@ app = Flask(__name__)
 # Database Setup
 #################################################
 
-app.config["SQLALCHEMY_DATABASE_URI"] = " URL here"
-db = SQLAlchemy(app)
+# app.config["SQLALCHEMY_DATABASE_URI"] = " URL here"
+# db = SQLAlchemy(app)
 
-Base = automap_base()
-Base.prepare(db.engine, reflect=True)
+# Base = automap_base()
+# Base.prepare(db.engine, reflect=True)
 
 #create route that renders index.html
 @app.route("/")
