@@ -2,26 +2,16 @@ import os
 import pandas as pd
 import numpy as np
 import requests
-import sqlalchemy
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine
 from flask import Flask, jsonify, render_template
-from flask_sqlalchemy import SQLAlchemy
 from flask_pymongo import PyMongo
 import pymongo
 
-
-
 app = Flask(__name__)
-
 
 #################################################
 # Database Setup
 #################################################
 
-# app.config["SQLALCHEMY_DATABASE_URI"] = " URL here"
-# db = SQLAlchemy(app)
 # mongo = PyMongo(app, uri="mongodb://localhost:27017/project2rice_app")
 conn = 'mongodb://localhost:27017/project2rice_app'
 client = pymongo.MongoClient(conn)
@@ -32,11 +22,6 @@ collection = db.Droughts
 collection = db.floods
 collection = db.fires
 
-
-
-# Base = automap_base()
-# Base.prepare(db.engine, reflect=True)
-
 #create route that renders index.html
 @app.route("/")
 def Home():
@@ -44,20 +29,22 @@ def Home():
     return render_template("index.html")
 
 
-@app.route("/geomap")
-def geomap():
+@app.route("/wildfire")
+def wildfire():
     
-    return render_template("comparison.html")
+    return render_template("wildfire.html")
 
-@app.route("/categories")
-def categories():
+@app.route("/hurricane")
+def hurricane():
 
-    return render_template("photos2.html")
+    return render_template("hurricane.html")
 
-# @app.route("/data")
-# def data():
+@app.route("/flood")
+def flood():
 
-#     return jsonify("data.html")
+    return render_template("flood.html")
+ # Redirect back to home page
+    return redirect("/")
 
 if __name__ == "__main__":
     app.run()
