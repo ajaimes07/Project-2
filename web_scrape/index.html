@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>severe weather Map</title>
+
+    <script type="text/javascript" src="https://env-132697.customer.cloud.microstrategy.com/MicroStrategyLibrary/javascript/embeddinglib.js"></script>
+
+  </head>
+
+  
+  <body onload="load()">
+
+    <!-- Top of page background image and social media -->
+    <div class="homepage">
+
+      <!-- Top bar with navigation buttons -->
+      <div id="navbar">
+        <a class="active" href="index.html#top">Home</a>
+        <a href="comparison.html" style="float: right;">#Flood  </a>
+        <a href="photos2.html" style="float: right;">#wildfire  </a>
+      </div>
+
+      <div class="content1" id="contact">
+
+        <h3>Welcome to  Weather Tweets</h3>
+
+        <p>The interactive mapview on the left displays the locations from which
+          severe weather tweets originated. Use the layer drop-down menu
+        to change the keyword search query.</p>
+        
+      </div>
+
+      <div  id="mapDossier"></div>
+
+      <script type="text/javascript">
+      var mapDossier;
+      function load() {
+        var container = document.getElementById("mapDossier"),
+          url = "https://env-132697.customer.cloud.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/D86026794FDC7A000D6E119841B91992/K53--K46";
+        microstrategy.dossier.create({
+          url: url,
+          enableResponsive: true,
+          placeholder: container,
+          containerHeight: '450px'
+        })
+      };
+    </script>
+
+    </div>
+  
+
+    <div class="lite"></div>
+
+    <div class="content0" id="about">
+      <h4>--- Team WeatherPy ---</h4>
+    </div>
+
+    <!-- <div class="homepage"></div> Optional Parallax Structure-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Leaflet</title>
+  
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+  
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/stylee.css">
+  </head>
+  <body>
+  
+    <!-- The div that holds our map -->
+    <div id="map"></div>
+  
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+    <!-- D3 JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+    <!-- Our JavaScript -->
+    <script type="text/javascript" src="static/js/logic.js"></script>
+  </body>
+
