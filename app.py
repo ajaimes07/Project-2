@@ -13,9 +13,7 @@ app.config['MONGO_URI'] = 'mongodb://project2:project2@ds121262.mlab.com:21262/h
 mongo = PyMongo(app)
 # connect to mongo db and collection
 # db = client.heroku_8r6fdxgl
-# collection = db.floods
-# collection = db.fires
-#create route that renders index.html
+
 @app.route("/")
 def Home():
     """Return the homepage."""
@@ -24,6 +22,14 @@ def Home():
 @app.route('/severe')
 def severe():
     return render_template('severe.html')
+
+@app.route('/fire')
+def severe():
+    return render_template('fire.html')
+
+@app.route('/flood')
+def severe():
+    return render_template('flood.html')
 
 @app.route("/#Fires", methods=['GET'])
 def get_all_fires():
