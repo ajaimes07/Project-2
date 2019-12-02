@@ -1,78 +1,114 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
 
-    <title>Flood Map</title>
 
-    <script type="text/javascript" src="https://env-132697.customer.cloud.microstrategy.com/MicroStrategyLibrary/javascript/embeddinglib.js"></script>
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
 
-  </head>
+  <title>Title page</title>  
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+<link href="static/css//main.3f6952e4.css" rel="stylesheet"></head>
+<!-- Our CSS -->
+<!-- <link rel="stylesheet" type="text/css" href="static/css/style.css"> -->
+</head>
+<body>
+
+  <!-- The div that holds our map -->
+<div id="map"></div>
+
+  <!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+  <!-- D3 JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+  <!-- Our JavaScript -->
+<script type="text/javascript" src="static/js/logic.js"></script>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+ <!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="index.html" title="">01 : Home</a></li>
+          <li><a href="severe.html" title="">02 : #SevereWeather</a></li>
+          <li><a href="fire.html" title="">03 : #Fire</a></li>
+          <li><a href="flood.html" title="">04 : #Flood</a></li>
+        </ul>
+
+
+      </div> 
+    </div>
+  </nav>
+</header>
+<div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-container-spacer text-center">
+            <h1 class="h2">03 : #Fire</h1>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="row">
+                <div class="col-xs-12 col-md-6">
+                  <h3>Welcome to Fire Tweets</h3>
+                  <p>On Earth, something is always burning. Wildfires are started by lightning or accidentally by people. Fires can generate large amounts of smoke pollution, release greenhouse gases, and unintentionally degrade ecosystems. But fires can also clear away dead and dying underbrush which can help restore an ecosystem. </p>                   
+                </div>
+                <div class="col-xs-12 col-md-6">
+                  <video alt="run away global warming GIF by GIPHY Studios Originals" src="https://media1.giphy.com/media/l0HlMURBbyUqF0XQI/giphy.mp4?cid=790b76116f850b269b754b5da1ca7349cd09b4527249f49b&amp;rid=giphy.mp4" poster="https://media1.giphy.com/media/l0HlMURBbyUqF0XQI/giphy_s.gif?cid=790b76116f850b269b754b5da1ca7349cd09b4527249f49b&amp;rid=giphy_s.gif" autoplay="" loop="" playsinline="" style="width: 480px; height: 480px; left: 0px; top: 0px;"></video>
+                  <img src="https://media1.giphy.com/media/l0HlMURBbyUqF0XQI/giphy.gif?cid=790b76116f850b269b754b5da1ca7349cd09b4527249f49b&amp;rid=giphy.gif" alt="run away global warming GIF by GIPHY Studios Originals" style="width: 480px; height: 480px; left: 0px; top: 0px; opacity: 0;">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+       </div>
+      </div>
+    </div>
+  </div>
 
   
-  <body onload="load()">
-
-    <!-- Top of page background image and social media -->
-    <div class="homepage">
-
-      <!-- Top bar with navigation buttons -->
-      <div id="navbar">
-        <a class="active" href="index.html#top">Home</a>
-        <a href="severe.html" style="float: left;">#Severe Weather </a>
-        <a href="fire.html" style="float: left;">#Fire  </a>
-        <a href="flood.html" style="float: left;">#Flood  </a>
-      </div>
-
-      <div class="content1" id="contact">
-
-        <h3>Welcome to Fire Tweets</h3>
-
-        <p> On Earth, something is always burning. Wildfires are started by lightning or accidentally by people. Fires can generate large amounts of smoke pollution, release greenhouse gases, and unintentionally degrade ecosystems. But fires can also clear away dead and dying underbrush which can help restore an ecosystem. 
-
-        </p>
-        
-      </div>
-
-      <div  id="mapDossier"></div>
-
-      <script type="text/javascript">
-      var mapDossier;
-      function load() {
-        var container = document.getElementById("mapDossier"),
-          url = "https://env-132697.customer.cloud.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/D86026794FDC7A000D6E119841B91992/K53--K46";
-          microstrategy.dossier.create({
-          url: url,
-          enableResponsive: true,
-          placeholder: container,
-          containerHeight: '450px'
-        })
-      };
+  <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+         navActivePage();
+      });
     </script>
-
-    </div>
-  
-
-    <div class="lite"></div>
-
-    <div class="content0" id="about">
-      <h4>--- Team WeatherPy ---</h4>
-    </div>
-
-    <!-- <div class="homepage"></div> Optional Parallax Structure-->
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="static/js/logic.js"></script></body>
-
-</html>
+    <!-- <script>
+        d3.json('/severeweather').then(function(data) {
+            var map = L.map("map-id", {
+        center: [40.73, -74.0059],
+        zoom: 12,
+        layers: [lightmap, bikeStations]
+            });
+    </script> -->
+        
+    <script type="text/javascript" src="static/js/main.70a66962.js"></script></body>
+    <script src="../static/js/app.js"></script>
+    <script src="static/js/logic.js"></script>
+    
+    
+    
+    
+    </html>

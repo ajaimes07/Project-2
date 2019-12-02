@@ -31,9 +31,9 @@ def get_all_fires():
     for f in fires.find() :
         output.append({'location': f['location'], 'date' : f['date']})
     return jsonify({'result' : output})
-    with open ('fires.json','w') as v:
-        json.dump(requests.form, l)
-    return render_html(flood.html)
+    # with open ('fires.json','w') as v:
+    #     json.dump(requests.form, l)
+    # return render_html(flood.html)
 
 
 
@@ -44,6 +44,8 @@ def get_all_floods():
     for F in floods.find() :
         output.append({'location': F['location'], 'date' : F['date']})
     return jsonify({'result' : output})
+    # return render_template
+
 
 
 @app.route("/severeweather", methods=['GET'])
