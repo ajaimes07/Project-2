@@ -31,6 +31,7 @@ def get_all_fires():
     for f in fires.find() :
         output.append({'location': f['location'], 'date' : f['date']})
     return jsonify({'result' : output})
+
     # with open ('fires.json','w') as v:
     #     json.dump(requests.form, l)
     # return render_html(flood.html)
@@ -55,7 +56,6 @@ def get_all_severeweather():
     for s in severeweather.find() :
         output.append({'location': s['location'], 'date' : s['date']})
     return jsonify({'result' : output})
-    data = request.get_json()
 
 # with open('fire.json','w') as f:
 #     json.dump(request.form, f)
