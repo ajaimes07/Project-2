@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
 
     <title>severe weather Map</title>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script type="text/javascript" src="https://env-132697.customer.cloud.microstrategy.com/MicroStrategyLibrary/javascript/embeddinglib.js"></script>
 
   </head>
+  
   <div class="d-none d-md-block">
       <nav class="navbar navbar-expand-sm bg-light navbar-light">
               <!-- Brand -->
@@ -55,8 +57,7 @@
         <h3>Welcome to  Severe Weather Tweets</h3>
 
         <p>The interactive mapview on the left displays the locations from which
-          severe weather tweets originated. Use the layer drop-down menu
-        to change the keyword search query.</p>
+          severe weather tweets originated. #SevereWeather. Natural phenomena that generally occur over very short time scales of hours to days to weeks. Extreme events include tornadoes, floods, heat and cold waves, wildfires, earthquakes, tsunamis, and volcanic eruptions.</p>
         
       </div>
 
@@ -94,28 +95,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     
 </html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Leaflet</title>
-  
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
-  
-    <!-- Our CSS -->
-    <link rel="stylesheet" type="text/css" href="static/css/stylee.css">
-  </head>
-  <body>
-  
-    <!-- The div that holds our map -->
-    <div id="map"></div>
-  
-    <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
-    <!-- D3 JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
-    <!-- Our JavaScript -->
-    <script type="text/javascript" src="static/js/logic.js"></script>
-  </body>
+  <script>
+
+    d3.json(‘/fires’).then(firesData => {
+        console.log(firesData);
+      });
+    d3.json(‘/floods’).then(floodsData => {
+        console.log(floodsData);
+    });
+    d3.json(‘/severeweather’).then(severeweatherData => {
+        console.log(severeweatherData);
+    
+    
+    </script>
 
