@@ -1,8 +1,13 @@
-# import requests
+import requests
 from flask import Flask, jsonify, render_template
 from flask_pymongo import PyMongo
 import pymongo
 import sys
+import json
+from requests import *
+# requests.get
+
+
 app = Flask(__name__)
 # conn = 'mongodb://localhost:27017/project2rice_app'
 # client = pymongo.MongoClient(conn)
@@ -26,6 +31,11 @@ def get_all_fires():
     for f in fires.find() :
         output.append({'location': f['location'], 'date' : f['date']})
     return jsonify({'result' : output})
+    with open ('fires.json','w') as v:
+        json.dump(requests.form, l)
+    return render_html(flood.html)
+
+
 
 @app.route("/flood", methods=['GET'])
 def get_all_floods():
@@ -35,6 +45,7 @@ def get_all_floods():
         output.append({'location': F['location'], 'date' : F['date']})
     return jsonify({'result' : output})
 
+
 @app.route("/severeweather", methods=['GET'])
 def get_all_severeweather():
     severeweather = mongo.db.severeweather
@@ -42,7 +53,11 @@ def get_all_severeweather():
     for s in severeweather.find() :
         output.append({'location': s['location'], 'date' : s['date']})
     return jsonify({'result' : output})
-   
+    data = request.get_json()
+
+# with open('fire.json','w') as f:
+#     json.dump(request.form, f)
+#     return render_html('flood.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

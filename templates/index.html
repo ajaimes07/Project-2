@@ -1,111 +1,79 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="style.css">
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
 
-    <title>severe weather Map</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script type="text/javascript" src="https://env-132697.customer.cloud.microstrategy.com/MicroStrategyLibrary/javascript/embeddinglib.js"></script>
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>Title page</title>  
 
-  </head>
-  
-  <div class="d-none d-md-block">
-      <nav class="navbar navbar-expand-sm bg-light navbar-light">
-              <!-- Brand -->
-              <a class="navbar-brand" id = "container_background_teal" href="index.html">
-                 Weather Py
-              </a>
-              <!-- Links -->
-              <ul class="navbar-nav">
-                  <!-- Dropdown -->
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="C:\Users\iretemiadelaja\Desktop\RU-HOU-DATA-PT-07-2019-U-C\11-Web\1\Activities\04-Stu_MyFirst_HTML\Solved\my-first.html" id="navbardrop" data-toggle="dropdown">
-                         Severe weather
-                      </a>
-                      <div class="dropdown-menu">
-                          <a class="dropdown-item" href="photos2.html">#Fire</a>
-                          <a class="dropdown-item" href="comparison.html">#Flood</a>
-                      </div>
-                  </li>
-              </ul>
-      </nav>
+<link href="static/css/main.3f6952e4.css" rel="stylesheet"></head>
+
+<body class="minimal">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="index.html" title="">01 : Home</a></li>
+          <li><a href="severe.html" title="">02 : #SevereWeather</a></li>
+          <li><a href="fire.html" title="">03 : #Fire</a></li>
+          <li><a href="flood.html" title="">04 : #Flood</a></li>
+        </ul>
+
+
+      </div> 
+    </div>
+  </nav>
+</header>
+<!-- Add your site or app content here -->
+  <div class="hero-full-container background-image-container white-text-container" style="background-image: url('./static/images/twitter-1.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="hero-full-wrapper">
+            <div class="text-content">
+              <h1>Team #1 <br>
+                <span id="typed-strings">
+                  <span>Presents Social Weather</span>
+                  <span>Welcomes You to</span>
+                  <span>#WEATHER</span>
+                </span>
+                <span id="typed"></span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  
-  <body onload="load()">
 
-    <!-- Top of page background image and social media -->
-    <div class="homepage">
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     type();
+     movingBackgroundImage();
+  });
+</script>
 
-      <!-- Top bar with navigation buttons -->
-      <div id="navbar">
-        <a class="active" href="index.html#top">Home</a>
-        <a href="comparison.html" style="float: right;">#Fire  </a>
-        <a href="photos2.html" style="float: right;">#Flood  </a>
-      </div>
 
-      <div class="content1" id="contact">
+<script type="text/javascript" src="static/js/main.70a66962.js"></script></body>
 
-        <h3>Welcome to  Severe Weather Tweets</h3>
-
-        <p>The interactive mapview on the left displays the locations from which
-          severe weather tweets originated. #SevereWeather. Natural phenomena that generally occur over very short time scales of hours to days to weeks. Extreme events include tornadoes, floods, heat and cold waves, wildfires, earthquakes, tsunamis, and volcanic eruptions.</p>
-        
-      </div>
-
-      <div  id="mapDossier"></div>
-
-      <script type="text/javascript">
-      var mapDossier;
-      function load() {
-        var container = document.getElementById("mapDossier"),
-          url = "https://env-132697.customer.cloud.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/D86026794FDC7A000D6E119841B91992/K53--K46";
-        microstrategy.dossier.create({
-          url: url,
-          enableResponsive: true,
-          placeholder: container,
-          containerHeight: '450px'
-        })
-      };
-    </script>
-
-    </div>
-  
-
-    <div class="lite"></div>
-
-    <div class="content0" id="about">
-      <h4>--- Team WeatherPy ---</h4>
-    </div>
-
-    <!-- <div class="homepage"></div> Optional Parallax Structure-->
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    
 </html>
-  <script>
-
-    d3.json(‘/fires’).then(firesData => {
-        console.log(firesData);
-      });
-    d3.json(‘/floods’).then(floodsData => {
-        console.log(floodsData);
-    });
-    d3.json(‘/severeweather’).then(severeweatherData => {
-        console.log(severeweatherData);
-    
-    
-    </script>
-
