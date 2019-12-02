@@ -110,3 +110,7 @@ h3 {
   text-decoration: none;
   outline: none;
 }
+
+#header {
+  background-image: url('/static/images/Twitter-1.jpg')
+}
