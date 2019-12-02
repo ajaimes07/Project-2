@@ -24,11 +24,11 @@ def severe():
     return render_template('severe.html')
 
 @app.route('/fire')
-def severe():
+def fire():
     return render_template('fire.html')
 
 @app.route('/flood')
-def severe():
+def flood():
     return render_template('flood.html')
 
 @app.route("/#Fires", methods=['GET'])
