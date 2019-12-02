@@ -21,7 +21,7 @@ def Home():
     """Return the homepage."""
     return render_template("index.html")
 
-@app.route("/fires", methods=['GET'])
+@app.route("/#Fires", methods=['GET'])
 def get_all_fires():
     fires = mongo.db.fires
     output = []
@@ -32,7 +32,7 @@ def get_all_fires():
 
 
 
-@app.route("/flood", methods=['GET'])
+@app.route("/#Floods", methods=['GET'])
 def get_all_floods():
     floods = mongo.db.floods
     output = []
@@ -43,7 +43,7 @@ def get_all_floods():
 
 
 
-@app.route("/severeweather", methods=['GET'])
+@app.route("/#SevereWeather", methods=['GET'])
 def get_all_severeweather():
     severeweather = mongo.db.severeweather
     output = []
