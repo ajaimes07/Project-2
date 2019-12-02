@@ -21,6 +21,10 @@ def Home():
     """Return the homepage."""
     return render_template("index.html")
 
+@app.route('/severe')
+def severe():
+    return render_template('severe.html')
+
 @app.route("/#Fires", methods=['GET'])
 def get_all_fires():
     fires = mongo.db.fires
@@ -28,7 +32,6 @@ def get_all_fires():
     for f in fires.find() :
         output.append({'location': f['location'], 'date' : f['date']})
     return jsonify({'result' : output})
-    return render_html(fire.html)
 
 
 
@@ -39,7 +42,6 @@ def get_all_floods():
     for F in floods.find() :
         output.append({'location': F['location'], 'date' : F['date']})
     return jsonify({'result' : output})
-    return render_template(flood.html)
 
 
 
@@ -50,7 +52,6 @@ def get_all_severeweather():
     for s in severeweather.find() :
         output.append({'location': s['location'], 'date' : s['date']})
     return jsonify({'result' : output})
-    return render_template(severeweather.html)
 
 
 # with open('fire.json','w') as f:
