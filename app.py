@@ -31,6 +31,10 @@ def fire():
 def flood():
     return render_template('flood.html')
 
+@app.route('/leaflet')
+def flood():
+    return render_template('leaflet.html')
+
 @app.route("/#Fires", methods=['GET'])
 def get_all_fires():
     fires = mongo.db.fires
