@@ -30,6 +30,7 @@
     crossorigin=""></script>
     
     <!--our own code to create the map-->
+    <script src="../static/js/locations.js"></script>
     <script>
       let map = L.map('map-container');
       map.setView([52.268, 4.998], 7);
@@ -71,7 +72,15 @@
       }
       
       //fetch the geojson and add it to our geojson layer
-      getGeoData('flood.geojson').then(data => geojson.addData(data));
+      // getGeoData('flood.geojson').then(data => {
+      //   console.log(data);
+      //   geojson.addData(data)
+      //   });
+      locations.forEach(coords => {
+        // console.log(coords);
+        L.marker(coords).addTo(map);
+      })
+
     </script>
   </body>
 </html>
