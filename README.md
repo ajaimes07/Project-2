@@ -1,5 +1,3 @@
-# Project-2 - Team Members: Aline Jaimes, Adelia Manuel, Iretemi Adelaja, John Knight
-
 #Using social media for actionable extreme weather event surveillance
 
 #Project Overview:
